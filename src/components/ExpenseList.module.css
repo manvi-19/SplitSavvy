@@ -1,0 +1,218 @@
+.listContainer {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(to right, #3498db, #2c82c9);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconWrapper {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.totalAmount {
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.375rem 0.75rem;
+  border-radius: 100px;
+}
+
+.expandButton {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  margin-left: 0.75rem;
+}
+
+.expandButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.expandIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.expandIcon.expanded {
+  transform: rotate(180deg);
+}
+
+.content {
+  padding: 0;
+}
+
+.emptyState {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.emptySubtext {
+  font-size: 0.875rem !important;
+  opacity: 0.7;
+  margin-top: 0.5rem !important;
+}
+
+.expenseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expenseItem {
+  display: flex;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.expenseItem:last-child {
+  border-bottom: none;
+}
+
+.expenseItem:hover {
+  background-color: var(--background-color);
+}
+
+.expenseIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.expenseDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.expenseTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.expenseDesc {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+}
+
+.expenseAmount {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.expenseBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.expensePayer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.payerLabel {
+  opacity: 0.7;
+}
+
+.expenseDate {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .expenseItem {
+    padding: 0.875rem 1rem;
+  }
+  
+  .expenseIcon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-right: 0.75rem;
+  }
+  
+  .expenseDesc {
+    font-size: 0.875rem;
+  }
+}

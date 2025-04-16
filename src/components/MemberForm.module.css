@@ -1,0 +1,87 @@
+.form {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  position: relative;
+}
+
+.inputGroup input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--card-background);
+  color: var(--text-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(18, 184, 134, 0.15);
+}
+
+.inputGroup input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.inputError {
+  border-color: #e53e3e !important;
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.15) !important;
+}
+
+.addButton {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addButton:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.addButton:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.addButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .inputGroup {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .addButton {
+    width: 100%;
+  }
+}
