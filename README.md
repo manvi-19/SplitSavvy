@@ -24,7 +24,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/splitsavvy.git
+git clone https://github.com/manvi-19/splitsavvy.git
 cd splitsavvy
 
 # Install dependencies
